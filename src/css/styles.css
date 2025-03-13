@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+:root {
+    --color-brand-primary: #F67841;
+    --color-brand-secondary: #F3541C;
+    --color-brand-tertiary: #E43A12;
+    --color-brand-quaternary: #2135A6;
+
+    --color-surface-primary: #FFFFFF;
+    --color-surface-secondary: #FEE7D6;
+    --color-surface-disabled: #E7E5E4;
+
+    --color-text-primary: #292524;
+    --color-text-secondary: #57534E;
+    --color-text-tertiary: #8F8881;
+    --color-text-highlight: #E43A12;
+
+    --color-stroke-default: #D6D3D1;
+    --color-stroke-highlight: #F3541C;
+
+    --color-semantic-error: #DC2626;
+}
+
+.heading1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.heading2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.heading3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.heading4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.text {
+    color: var(--color-text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.center-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary)
+}
+
+.spacing-default {
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.background-blue {
+    background-color: var(--color-brand-quaternary);
+    height: 100%;
+}
+
+.image-container {
+    flex: 1;
+    background: var(--color-brand-quaternary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}

@@ -108,3 +108,16 @@ body {
     padding: 20px;
     overflow-y: auto;
 }
+
+.informacoes__participante {
+    display: flex;
+    align-items: left;
+    font-family:  'Poppins', sans-serif;
+    width: 100%;
+    flex-direction: column;
+    height: 10%;
+    margin: 10px;
+    line-height: 120%;
+    
+    
+}

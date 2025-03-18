@@ -163,6 +163,19 @@ input:focus {
 
 input[type="text"]::placeholder {
     color: var(--color-text-secondary);
+    font-family: var(--font-primary);
+}
+
+input[type="date"] {
+    font-family: var(--font-primary);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: var(--color-text-secondary);
 }
 
 select {

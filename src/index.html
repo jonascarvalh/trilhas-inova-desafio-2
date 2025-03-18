@@ -67,76 +67,112 @@
                     </div>
                 
                     <h4 class="informacoes__participante">Endereço residencial</h4>
-                
+                    
                     <div class="campo">
                         <label class="entrada" for="cep">CEP</label>
                         <input type="text" id="cep" name="cep" placeholder="00000-000" required>
                     </div>
-                
-                    <div class="campo">
-                        <label class="entrada" for="rua">Rua</label>
-                        <input type="text" id="rua" name="rua" placeholder="Rua Joaquim Vieira" required>
+
+                    <div class="campos-residenciais">              
+                        <div class="campo">
+                            <label class="entrada" for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" placeholder="Rua Joaquim Vieira" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label class="entrada" for="numero">Número</label>
+                            <input type="text" id="numero" name="numero" placeholder="10" required>
+                        </div>
                     </div>
-                
-                    <div class="campo">
-                        <label class="entrada" for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" placeholder="São Luís" required>
+
+                    <div class="campos-residenciais">
+                        <div class="campo">
+                            <label class="entrada" for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="São Luís" required>
+                        </div>
+                    
+                        <div class="campo">
+                            <label class="entrada" for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" placeholder="Maranhão" required>
+                        </div>
                     </div>
-                
+
                     <div class="campo">
-                        <label class="entrada" for="estado">Estado</label>
-                        <input type="text" id="estado" name="estado" placeholder="Maranhão" required>
+                        <label class="entrada" for="identidade">Comprovante de residência</label>
+                        <label class="entrada file-label" for="identidade">
+                            <img src="../assets/images/icons/cloud-upload.svg" alt="nuvem-upload">
+                            <p>Clique aqui para</p>
+                            <p>selecionar o arquivo</p>
+                        </label>
+                        <input type="file" id="identidade" name="identidade" required>
                     </div>
-                
+
                     <h4 class="informacoes__participante">Trilhas de aprendizagem</h4>
                 
-                        <p class="subcomando">Selecione apenas uma trilha</p>
-                        <form>
-                            <div class="trilhas">
-                                <label class="trilha">
-                                    <div class="content__box">
-                                        <img src="front-end.png"> Programação Front-end </div>
-                                </label>
-
-                                <label class="trilha">
-                                    <div class="content__box">
-                                        <img src="back-end.png"> Programação Back-end</div>
-                                </label>
-
-                                <label class="trilha">
-                                    <div class="content__box">🎮<br>Programação de Jogos</div>
-                                </label>
-
-                                <label class="trilha">
-                                    <div class="content__box">🎨<br>Design e Experiência</div>
-                                </label>
-
-                                <label class="trilha">
-                                    <div class="content__box">📊<br>Ciência de Dados</div>
-                                </label>
-                            </div>
-
-                            <div class="termos">
-                                <label class="checkbox--container">
-                                    <input type="checkbox">
-                                    
-                                    Declaro que li e concordo com os <strong class="termos__destaque"> Termos e Condições </strong> e com a 
-                                    <strong class="termos__destaque">Política de Privacidade</strong>;
-                                </label>
-                            </div>
+                    <p class="subcomando">Selecione apenas uma trilha</p>
+                    
+                    <div class="space-cards-trilhas">
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="radio-trilha" id="front" value="front">
+                                <div class="conteudo-card">
+                                    <img src="../assets/images/icons/icon-front.svg" alt="Icone trilha front-end">
+                                </div>
+                                <p>Programação Front-end</p>
+                            </label>
                             
-                            <div class="botoes">
-                                <button class="cancelar">Cancelar</button>
-                                <button class="inscricao">Fazer inscrição</button>
-                            </div>
-                            
+                            <label class="radio-card">
+                                <input type="radio" name="radio-trilha" id="back" value="back">
+                                <div class="conteudo-card">
+                                    <img src="../assets/images/icons/icon-back.svg" alt="Icone trilha back-end">
+                                </div>
+                                <p>Programação Back-end</p>
+                            </label>
+                        </div>
 
-                </form>
-                
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="radio-trilha" id="jogos" value="jogos">
+                                <div class="conteudo-card">
+                                    <img src="../assets/images/icons/icon-jogos.svg" alt="Icone trilha de jogos">
+                                </div>
+                                <p>Programação de Jogos</p>
+                            </label>
+                            
+                            <label class="radio-card">
+                                <input type="radio" name="radio-trilha" id="design" value="design">
+                                <div class="conteudo-card">
+                                    <img src="../assets/images/icons/icon-design.svg" alt="Icone trilha design-end">
+                                </div>
+                                <p>Design e Experiência</p>
+                            </label>
+                        </div>
+                        
+                        <label class="radio-card class-dados">
+                            <input type="radio" name="radio-trilha" id="dados" value="dados">
+                            <div class="conteudo-card">
+                                <img src="../assets/images/icons/icon-dados.svg" alt="Icone trilha dados-end">
+                            </div>
+                            <p>Ciência de Dados</p>
+                        </label>
+                    </div>
+
+                    <div class="termos">
+                        <label class="checkbox--container">
+                            <p>
+                                <input type="checkbox" name="termos-condicoes" id="termos-condicoes">
+                                Declaro que li e concordo com os <strong class="termos__destaque">Termos e Condições</strong> e com a 
+                                <strong class="termos__destaque">Política de Privacidade</strong>.
+                            </p>
+                        </label>
+                    </div>
+                    
+                    <div class="botoes">
+                        <button class="cancelar">Cancelar</button>
+                        <button class="inscricao">Fazer inscrição</button>
+                    </div>
             </div>
-
         </div>
-
         <div class="image-container background-blue">
             <img src="../assets/images/Ilustration.png" alt="ilustration">
         </div>

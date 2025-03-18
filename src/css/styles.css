@@ -209,17 +209,15 @@ input[type="file"] {
 
 .campos-residenciais {
     display: flex;
-    gap: 16px; /* Espaçamento entre os campos */
+    gap: 16px;
     width: 100%;
 }
 
 .campos-residenciais .campo:first-child {
-    /*flex: 2; !* Campo da rua/cidade ocupa 2/3 do espaço *!*/
     width: 66%;
 }
 
 .campos-residenciais .campo:last-child {
-    /*flex: 1; !* Campo do número/estado ocupa 1/3 do espaço *!*/
     width: 33%;
 }
 

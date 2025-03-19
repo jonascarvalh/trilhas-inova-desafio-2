@@ -16,6 +16,9 @@ body {
     --color-brand-secondary: #F3541C;
     --color-brand-tertiary: #E43A12;
     --color-brand-quaternary: #2135A6;
+    --color-brand-dark: #e64a19;
+    --color-brand-dark-hover: #b33610;
+
 
     --color-surface-primary: #FFFFFF;
     --color-surface-secondary: #FEE7D6;
@@ -301,7 +304,7 @@ input[type="checkbox"] {
 }
 
 .termos__destaque {
-    color: #E43A12;
+    color: var(--color-brand-tertiary);
     font-weight: 500;
 }
 
@@ -313,29 +316,31 @@ input[type="checkbox"] {
 
 .cancelar {
     background: transparent;
-    border: 2px solid #ff5722;
-    color: #ff5722;
+    border: 2px solid var(--color-text-highlight);
+    color: var(--color-text-highlight);
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-family: var(--font-primary);
 }
 
 .inscricao {
-    background: #ff5722;
+    background: var(--color-brand-dark);
     border: none;
-    color: white;
+    color: var(--color-surface-primary);
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-family: var(--font-primary);
 }
 
 .cancelar:hover {
-    background: #ff5722;
-    color: white;
+    background: var(--color-text-highlight);
+    color: var(--color-surface-primary);
 }
 
 .inscricao:hover {
-    background: #e64a19;
+    background: var(--color-brand-dark-hover);
 }

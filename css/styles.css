@@ -265,6 +265,7 @@ input[type="file"] {
     padding: 32px 16px 16px;
     width: 100%;
     height: 120px;
+    text-align: center;
 }
 
 .card__data_science {
@@ -343,4 +344,30 @@ input[type="checkbox"] {
 
 .subscribe:hover {
     background: var(--color-brand-dark-hover);
+}
+
+@media (max-width: 1030px){
+    .spacing__default {
+        padding: 16px;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .card__data_science {
+        width: 47.5%;
+    }
+
+    .residential__fields {
+        flex-direction: column;
+    }
+
+    .residential__fields .field:first-child {
+        width: 100%;
+    }
+    
+    .residential__fields .field:last-child {
+        width: 100%;
+    }
 }

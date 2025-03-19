@@ -9,35 +9,35 @@
     <body>
         <div class="form-container">
 
-            <div class="spacing-default">
-                <div class="center-back">
+            <div class="spacing__default">
+                <div class="back__container">
                     <img src="../assets/images/icons/arrow-left-02.png" alt="arrow-left-02">
                     <p class="text">Voltar</p>
                 </div>
-                <h1 class="heading1 text-primary">Formulário de Inscrição</h1>
-                <p class="text text-secondary">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+                <h1 class="heading1 text__primary">Formulário de Inscrição</h1>
+                <p class="text text__secondary">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
 
-                <form class="formulario" action="" method="post">
+                <form class="form__register" action="" method="post">
 
-                    <h4 class="informacoes__participante">Informações do Participante</h4>
+                    <h4 class="info__participant">Informações do Participante</h4>
                 
-                    <div class="campo">
-                        <label class="entrada" for="nome">Nome Completo</label>
+                    <div class="field">
+                        <label class="input__label" for="nome">Nome Completo</label>
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="data_nascimento">Data de Nascimento</label>
+                    <div class="field">
+                        <label class="input__label" for="data_nascimento">Data de Nascimento</label>
                         <input type="date" id="data_nascimento" name="data_nascimento" placeholder="dd/mm/aa" required>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="cpf">CPF</label>
+                    <div class="field">
+                        <label class="input__label" for="cpf">CPF</label>
                         <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="sexo">Sexo</label>
+                    <div class="field">
+                        <label class="input__label" for="sexo">Sexo</label>
                         <select id="sexo" name="sexo" required>
                             <option value="">Selecione</option>
                             <option value="masculino">Masculino</option>
@@ -46,19 +46,19 @@
                         </select>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="email">E-mail</label>
+                    <div class="field">
+                        <label class="input__label" for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="telefone">Telefone</label>
+                    <div class="field">
+                        <label class="input__label" for="telefone">Telefone</label>
                         <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
                     </div>
                 
-                    <div class="campo">
-                        <label class="entrada" for="identidade">Documento de identidade</label>
-                        <label class="entrada file-label" for="identidade">
+                    <div class="field">
+                        <label class="input__label" for="identidade">Documento de identidade</label>
+                        <label class="input__label file__label" for="identidade">
                             <img src="../assets/images/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
@@ -68,38 +68,38 @@
                 
                     <h4 class="informacoes__participante">Endereço residencial</h4>
                     
-                    <div class="campo">
-                        <label class="entrada" for="cep">CEP</label>
+                    <div class="field">
+                        <label class="input__label" for="cep">CEP</label>
                         <input type="text" id="cep" name="cep" placeholder="00000-000" required>
                     </div>
 
-                    <div class="campos-residenciais">              
-                        <div class="campo">
-                            <label class="entrada" for="rua">Rua</label>
+                    <div class="residential__fields">              
+                        <div class="field">
+                            <label class="input__label" for="rua">Rua</label>
                             <input type="text" id="rua" name="rua" placeholder="Rua Joaquim Vieira" required>
                         </div>
                         
-                        <div class="campo">
-                            <label class="entrada" for="numero">Número</label>
+                        <div class="field">
+                            <label class="input__label" for="numero">Número</label>
                             <input type="text" id="numero" name="numero" placeholder="10" required>
                         </div>
                     </div>
 
-                    <div class="campos-residenciais">
-                        <div class="campo">
-                            <label class="entrada" for="cidade">Cidade</label>
+                    <div class="residential__fields">
+                        <div class="field">
+                            <label class="input__label" for="cidade">Cidade</label>
                             <input type="text" id="cidade" name="cidade" placeholder="São Luís" required>
                         </div>
                     
-                        <div class="campo">
-                            <label class="entrada" for="estado">Estado</label>
+                        <div class="field">
+                            <label class="input__label" for="estado">Estado</label>
                             <input type="text" id="estado" name="estado" placeholder="Maranhão" required>
                         </div>
                     </div>
 
-                    <div class="campo">
-                        <label class="entrada" for="identidade">Comprovante de residência</label>
-                        <label class="entrada file-label" for="identidade">
+                    <div class="field">
+                        <label class="input__label" for="identidade">Comprovante de residência</label>
+                        <label class="input__label file__label" for="identidade">
                             <img src="../assets/images/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
@@ -109,11 +109,11 @@
 
                     <h4 class="informacoes__participante">Trilhas de aprendizagem</h4>
                 
-                    <p class="subcomando">Selecione apenas uma trilha</p>
+                    <p class="text__command">Selecione apenas uma trilha</p>
                     
-                    <div class="space-cards-trilhas">
-                        <div class="radio-group">
-                            <label class="radio-card">
+                    <div class="cards__trilhas_container">
+                        <div class="radio__group">
+                            <label class="radio__card">
                                 <input type="radio" name="radio-trilha" id="front" value="front">
                                 <div class="conteudo-card">
                                     <img src="../assets/images/icons/icon-front.svg" alt="Icone trilha front-end">
@@ -121,7 +121,7 @@
                                 <p>Programação Front-end</p>
                             </label>
                             
-                            <label class="radio-card">
+                            <label class="radio__card">
                                 <input type="radio" name="radio-trilha" id="back" value="back">
                                 <div class="conteudo-card">
                                     <img src="../assets/images/icons/icon-back.svg" alt="Icone trilha back-end">
@@ -130,8 +130,8 @@
                             </label>
                         </div>
 
-                        <div class="radio-group">
-                            <label class="radio-card">
+                        <div class="radio__group">
+                            <label class="radio__card">
                                 <input type="radio" name="radio-trilha" id="jogos" value="jogos">
                                 <div class="conteudo-card">
                                     <img src="../assets/images/icons/icon-jogos.svg" alt="Icone trilha de jogos">
@@ -139,7 +139,7 @@
                                 <p>Programação de Jogos</p>
                             </label>
                             
-                            <label class="radio-card">
+                            <label class="radio__card">
                                 <input type="radio" name="radio-trilha" id="design" value="design">
                                 <div class="conteudo-card">
                                     <img src="../assets/images/icons/icon-design.svg" alt="Icone trilha design-end">
@@ -148,8 +148,8 @@
                             </label>
                         </div>
                         
-                        <label class="radio-card class-dados">
-                            <input type="radio" name="radio-trilha" id="dados" value="dados">
+                        <label class="radio__card card__data_science">
+                            <input type="radio" name="radio-trilha" id="data-science" value="data-science">
                             <div class="conteudo-card">
                                 <img src="../assets/images/icons/icon-dados.svg" alt="Icone trilha dados-end">
                             </div>
@@ -157,19 +157,19 @@
                         </label>
                     </div>
 
-                    <div class="termos">
+                    <div class="terns">
                         <label class="checkbox--container">
                             <p>
-                                <input type="checkbox" name="termos-condicoes" id="termos-condicoes">
-                                Declaro que li e concordo com os <strong class="termos__destaque">Termos e Condições</strong> e com a 
-                                <strong class="termos__destaque">Política de Privacidade</strong>.
+                                <input type="checkbox" name="termos-condicoes" id="term_highlight">
+                                Declaro que li e concordo com os <strong class="terms__highlight">Termos e Condições</strong> e com a 
+                                <strong class="terms__highlight">Política de Privacidade</strong>.
                             </p>
                         </label>
                     </div>
                     
-                    <div class="botoes">
-                        <button class="cancelar">Cancelar</button>
-                        <button class="inscricao">Fazer inscrição</button>
+                    <div class="buttons__container">
+                        <button class="cancel">Cancelar</button>
+                        <button class="subscribe">Fazer inscrição</button>
                     </div>
             </div>
         </div>

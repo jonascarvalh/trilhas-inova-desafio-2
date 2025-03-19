@@ -70,21 +70,21 @@ body {
     line-height: 120%;
 }
 
-.center-back {
+.back__container {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.text-primary {
+.text__primary {
     color: var(--color-text-primary);
 }
 
-.text-secondary {
+.text__secondary {
     color: var(--color-text-secondary);
 }
 
-.spacing-default {
+.spacing__default {
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -119,13 +119,13 @@ body {
     overflow-y: auto;
 }
 
-.formulario {
+.form__register {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.informacoes__participante {
+.info__participant {
     display: flex;
     font-size: 1rem;
     color: var(--color-text-primary);
@@ -136,13 +136,13 @@ body {
     line-height: 120%;
 }
 
-.campo {
+.field {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.entrada {
+.input__label {
     font-weight: 400;
     font-size: 0.875rem;
     color: var(--color-text-secondary);
@@ -209,7 +209,7 @@ input[type="file"] {
     display: none;
 }
 
-.file-label {
+.file__label {
     border: 1px dashed var(--color-stroke-default);
     border-radius: 8px;
     background-color: var(--color-surface-primary);
@@ -223,37 +223,37 @@ input[type="file"] {
     justify-content: center;
 }
 
-.campos-residenciais {
+.residential__fields {
     display: flex;
     gap: 16px;
     width: 100%;
 }
 
-.campos-residenciais .campo:first-child {
+.residential__fields .field:first-child {
     width: 66%;
 }
 
-.campos-residenciais .campo:last-child {
+.residential__fields .field:last-child {
     width: 33%;
 }
 
-.subcomando {
+.text__command {
     font-size: 0.875rem;
     color: var(--color-text-secondary);
 }
 
-.radio-group {
+.radio__group {
     display: flex;
     gap: 16px;
 }
 
-.space-cards-trilhas {
+.cards__trilhas_container {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.radio-card {
+.radio__card {
     position: relative;
     display: flex;
     align-items: center;
@@ -267,11 +267,11 @@ input[type="file"] {
     height: 120px;
 }
 
-.class-dados {
+.card__data_science {
     width: 49%;
 }
 
-.radio-card input {
+.radio__card input {
     position: absolute;
     top: 8px;
     left: 8px;
@@ -287,7 +287,7 @@ input[type="checkbox"] {
     height: auto;
 }
 
-.termos {
+.terms {
     font-weight: 400;
     font-size: 1rem;
     line-height: 150%;
@@ -297,24 +297,24 @@ input[type="checkbox"] {
     margin: 24px 0;
 }
 
-.termos a {
+.terms a {
     color: #ff5722;
     text-decoration: none;
     font-weight: bold;
 }
 
-.termos__destaque {
+.terms__highlight {
     color: var(--color-brand-tertiary);
     font-weight: 500;
 }
 
-.botoes {
+.buttons__container {
     display: flex;
     gap: 12px;
     justify-content: flex-end; 
 }
 
-.cancelar {
+.cancel {
     background: transparent;
     border: 2px solid var(--color-text-highlight);
     color: var(--color-text-highlight);
@@ -325,7 +325,7 @@ input[type="checkbox"] {
     font-family: var(--font-primary);
 }
 
-.inscricao {
+.subscribe {
     background: var(--color-brand-dark);
     border: none;
     color: var(--color-surface-primary);
@@ -336,11 +336,11 @@ input[type="checkbox"] {
     font-family: var(--font-primary);
 }
 
-.cancelar:hover {
+.cancel:hover {
     background: var(--color-text-highlight);
     color: var(--color-surface-primary);
 }
 
-.inscricao:hover {
+.subscribe:hover {
     background: var(--color-brand-dark-hover);
 }

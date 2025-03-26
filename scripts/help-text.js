@@ -6,15 +6,15 @@ form.addEventListener('submit', function(event) {
 
     let formValido = true;
 
-    let name = fields[0].querySelector('#name');
+    let nameInput = fields[0].querySelector('#name');
     let helpText = fields[0].getElementsByClassName('help-text')[0];
-    
-    if (name.value.trim() === '') {
+
+    if (nameInput.value.trim() === '') { // String vazia
         helpText.classList.remove('help__text--hidden');
-        formValido = true;
-    } else {
-        helpText.classList.add('help__text--hidden');
         formValido = false;
+    } else { // String preenchida
+        helpText.classList.add('help__text--hidden');
+        formValido = true;
     }
 
     if (formValido) {

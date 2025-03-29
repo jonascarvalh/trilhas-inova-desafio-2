@@ -6,65 +6,66 @@ form.addEventListener('submit', function(event) {
 
     let formValido = true;
 
-    let nameInput = fields[0].querySelector('#name');
-    let helpText = fields[0].getElementsByClassName('help-text')[0];
+    // Verificando os campos que podem possuir texto ou anexo
+    for (let i = 0; i < fields.length; i++) { 
+        let inputField = fields[i].querySelector('input');
+        let helpText   = fields[i].querySelector('.help-text');
+        
+        if (inputField != null) {
+            if (inputField.value.trim() === '') { // String vazia
+                helpText.classList.remove('help__text--hidden');
+                formValido = false;
+            } else { // String com valor
+                helpText.classList.add('help__text--hidden');
+                formValido = true;
+            }
+        } else { // Verificando o select (não é um input value)
+            let select = fields[i].querySelector('select');
+            if (select.value == '') {
+                helpText.classList.remove('help__text--hidden');
+                formValido = false;
+            } else {
+                helpText.classList.add('help__text--hidden');
+                formValido = true;
+            }
+        }
+    }
 
-    if (nameInput.value.trim() === '') { // String vazia
-        helpText.classList.remove('help__text--hidden');
+    // Validação dos radio buttons
+    let radios = document.querySelectorAll('input[name="radio-trilha"]');
+    let radioSelecionado = false;
+    for (let radio of radios) {
+        if (radio.checked) {
+            radioSelecionado = true;
+            break;
+        }
+    }
+
+    let helpTextRadios = document.querySelector('.cards__trilhas_container .help-text');
+    if (!radioSelecionado) {
+        helpTextRadios.classList.remove('help__text--hidden');
         formValido = false;
-    } else { // String preenchida
-        helpText.classList.add('help__text--hidden');
+    } else {
+        helpTextRadios.classList.add('help__text--hidden');
         formValido = true;
     }
 
+    
+    // Validação checkbox de política e privacidade
+    let termsDiv = document.querySelector('.terms');
+    let helpTextTerms = termsDiv.querySelector('.help-text');
+    let statusCheckbox = termsDiv.querySelector('#term_highlight');
+
+    if (!statusCheckbox.checked) {
+        helpTextTerms.classList.remove('help__text--hidden');
+        formValido = false;
+    } else {
+        helpTextTerms.classList.add('help__text--hidden');
+        formValido = true;
+    }
+    
     if (formValido) {
         this.submit;
     }
 
 });
-
-    let dateInput = fields[1].querySelector('#data_nascimento');
-    let helpText = fields[1].getElementsByClassName('help-text')[0];
-
-    if (dateInput.value.trim() === '') {
-        helpText.classList.remove('help__text--hidden');
-        formValido = false;
-    } else {
-        helpText.classList.add('help__text--hidden');
-        formValido = true;
-    }
-
-    if (formValido) {
-        this.submit;
-    }
-
-
-    let cpfInput = fields[2].querySelector('#cpf');
-    let helpText = fields[2].getElementsByClassName('help-text')[0];
-
-    if (cpfInput.value.trim() === '') {
-        helpText.classList.remove('help__text--hidden');
-        formValido = false;
-    } else {
-        helpText.classList.add('help__text--hidden');
-        formValido = true;
-    }
-
-    if (formValido) {
-        this.submit;
-    }
-
-
-    let sexoInput = fields[3].querySelector('#sexo');
-    let helpText = fields[3].getElementsByClassName('help-text')[0];
-
-    if (sexoInput.value.trim() === '') {
-        helpText.classList.remove('help__text--hidden');
-        formValido = false;
-    } else {
-        sexoHelpText.classList.add('help__text--hidden');
-    }
-
-    if (formValido) {
-        this.submit;
-    }

@@ -11,7 +11,7 @@ form.addEventListener('submit', function(event) {
         let inputField = fields[i].querySelector('input');
         let helpText   = fields[i].querySelector('.help-text');
         
-        if (inputField != null) {
+        if (inputField != null) { // Vai ser texto
             if (inputField.value.trim() === '') { // String vazia
                 helpText.classList.remove('help__text--hidden');
                 formValido = false;
@@ -40,7 +40,7 @@ form.addEventListener('submit', function(event) {
             break;
         }
     }
-
+    
     let helpTextRadios = document.querySelector('.cards__trilhas_container .help-text');
     if (!radioSelecionado) {
         helpTextRadios.classList.remove('help__text--hidden');

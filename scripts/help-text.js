@@ -5,6 +5,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let formValido = true;
+    let formData = {};
 
     // Verificando os campos que podem possuir texto ou anexo
     for (let i = 0; i < fields.length; i++) { 
@@ -17,6 +18,7 @@ form.addEventListener('submit', function(event) {
                 formValido = false;
             } else { // String com valor
                 helpText.classList.add('help__text--hidden');
+                formData[inputField.name] = inputField.value;
                 formValido = true;
             }
         } else { // Verificando o select (não é um input value)
@@ -26,6 +28,7 @@ form.addEventListener('submit', function(event) {
                 formValido = false;
             } else {
                 helpText.classList.add('help__text--hidden');
+                formData[select.name] = select.value;
                 formValido = true;
             }
         }
@@ -37,6 +40,7 @@ form.addEventListener('submit', function(event) {
     for (let radio of radios) {
         if (radio.checked) {
             radioSelecionado = true;
+            formData['radio-trilha'] = radio.value;
             break;
         }
     }
@@ -61,11 +65,14 @@ form.addEventListener('submit', function(event) {
         formValido = false;
     } else {
         helpTextTerms.classList.add('help__text--hidden');
+        formData['termos-condicoes'] = statusCheckbox.checked;
         formValido = true;
     }
     
     if (formValido) {
-        this.submit;
+        sessionStorage.setItem('formData', JSON.stringify(formData));
+        // console.log(sessionStorage.getItem('formData'));
+        this.submit();
     }
 
 });

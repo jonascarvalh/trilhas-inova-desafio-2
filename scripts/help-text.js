@@ -13,8 +13,7 @@ form.addEventListener('submit', function(event) {
         let helpText   = fields[i].querySelector('.help-text');
         
         if (inputField != null) { // Vai ser texto
-            if (inputField.value.trim() === '') { // String vazia
-                helpText.classList.remove('help__text--hidden');
+            if (!validarCampoInput(inputField, helpText)) { // String vazia
                 formValido = false;
             } else { // String com valor
                 helpText.classList.add('help__text--hidden');
@@ -23,11 +22,10 @@ form.addEventListener('submit', function(event) {
             }
         } else { // Verificando o select (não é um input value)
             let select = fields[i].querySelector('select');
-            if (select.value == '') {
+            if (select.value === '') {
                 helpText.classList.remove('help__text--hidden');
                 formValido = false;
             } else {
-                helpText.classList.add('help__text--hidden');
                 formData[select.name] = select.value;
                 formValido = true;
             }
@@ -76,3 +74,58 @@ form.addEventListener('submit', function(event) {
     }
 
 });
+
+function validarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, '');
+
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+        return false;
+    }
+
+    for (let i = 9; i <= 10; i++) {
+        let soma = 0;
+        for (let j = 0; j < i; j++) {
+            soma += parseInt(cpf.charAt(j)) * (i + 1 - j);
+        }
+        let digito = (soma * 10) % 11;
+        if (digito === 10 || digito === 11) {
+            digito = 0;
+        }
+        if (digito !== parseInt(cpf.charAt(i))) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function validarCampoInput(inputField, helpText) {
+    const nomeCampo = inputField.name;
+    const valor = inputField.value.trim();
+
+    if (valor === '') {
+        helpText.innerHTML = `
+            <i class="fa-solid fa-circle-exclamation"></i>
+            Este é um campo obrigatório.
+        `;
+        helpText.classList.remove('help__text--hidden');
+        return false;
+    }
+
+    if (nomeCampo === 'cpf' && !validarCPF(valor)) {
+        helpText.innerHTML = `
+            <i class="fa-solid fa-circle-exclamation"></i>
+            CPF inválido.
+        `;
+        helpText.classList.remove('help__text--hidden');
+        return false;
+    }
+
+    helpText.classList.add('help__text--hidden');
+    helpText.innerHTML = `
+        <i class="fa-solid fa-circle-exclamation"></i>
+        Este é um campo obrigatório.
+    `;
+    return true;
+}
+

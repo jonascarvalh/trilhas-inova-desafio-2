@@ -163,3 +163,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+function carregarMascaras() {
+    const cpf = document.getElementById('cpf');
+    IMask(cpf, {
+        mask: '000.000.000-00'
+    });
+
+    const telefone = document.getElementById('telefone');
+    IMask(telefone, {
+        mask: '(00) 00000-0000'
+    });
+
+    const cep = document.getElementById('cep');
+    IMask(cep, {
+        mask: '00000-000'
+    });
+
+    const numero = document.getElementById('numero');
+    IMask(numero, {
+        mask: Number,
+        min: 0,
+        max: 99999
+    });
+}
+
+carregarMascaras();

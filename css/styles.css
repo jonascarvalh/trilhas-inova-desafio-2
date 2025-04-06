@@ -361,6 +361,36 @@ input[type="checkbox"] {
     display: none;
 }
 
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px dashed var(--color-stroke-default);
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: var(--color-surface-primary);
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.file-preview i.fa-file {
+    color: var(--color-brand-dark);
+    margin-right: 8px;
+}
+
+.remove-file {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-semantic-error);
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
 @media (max-width: 1030px){
     .spacing__default {
         padding: 16px;

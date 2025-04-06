@@ -81,21 +81,32 @@
                             Este é um campo obrigatório.
                         </div>
                     </div>
-                
-                    <div class="field">
+
+                    <div class="field file-field">
                         <label class="input__label" for="identidade">Documento de identidade</label>
-                        <label class="input__label file__label" for="identidade">
+
+                        <label class="input__label file__label" for="identidade" id="label-identidade">
                             <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
                         </label>
+
+                        <div class="file-preview hidden" id="preview-identidade">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-identidade"></span>
+                            <button type="button" class="remove-file" data-target="identidade">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
                         <input type="file" id="identidade" name="identidade">
+
                         <div class="help-text help__text--hidden">
                             <i class="fa-solid fa-circle-exclamation"></i>
                             Este é um campo obrigatório.
                         </div>
                     </div>
-                
+
                     <h4 class="informacoes__participante">Endereço residencial</h4>
                     
                     <div class="field">
@@ -147,14 +158,25 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <label class="input__label" for="comprovante">Comprovante de residência</label>
-                        <label class="input__label file__label" for="comprovante">
+                    <div class="field file-field">
+                        <label class="input__label" for="comprovante">Comprovante de Residencia</label>
+
+                        <label class="input__label file__label" for="comprovante" id="label-comprovante">
                             <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
                         </label>
+
+                        <div class="file-preview hidden" id="preview-comprovante">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-comprovante"></span>
+                            <button type="button" class="remove-file" data-target="comprovante">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
                         <input type="file" id="comprovante" name="comprovante">
+
                         <div class="help-text help__text--hidden">
                             <i class="fa-solid fa-circle-exclamation"></i>
                             Este é um campo obrigatório.

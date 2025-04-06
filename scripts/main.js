@@ -129,3 +129,37 @@ function validarCampoInput(inputField, helpText) {
     return true;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+
+    fileInputs.forEach(input => {
+        input.addEventListener("change", function () {
+            const file = this.files[0];
+            const id = this.id;
+            const preview = document.getElementById(`preview-${id}`);
+            const fileNameSpan = document.getElementById(`file-name-${id}`);
+            const label = document.getElementById(`label-${id}`);
+
+            if (file) {
+                fileNameSpan.textContent = file.name;
+                preview.classList.remove("hidden");
+                label.classList.add("hidden");
+            }
+        });
+    });
+
+    const removeButtons = document.querySelectorAll(".remove-file");
+
+    removeButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const target = this.dataset.target;
+            const input = document.getElementById(target);
+            const preview = document.getElementById(`preview-${target}`);
+            const label = document.getElementById(`label-${target}`);
+
+            input.value = "";
+            preview.classList.add("hidden");
+            label.classList.remove("hidden");
+        });
+    });
+});

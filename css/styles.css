@@ -243,7 +243,7 @@ input[type="file"] {
 
 .radio__group {
     display: flex;
-    gap: 16px;
+    gap: 1.5rem;
 }
 
 .cards__trilhas_container {
@@ -413,6 +413,17 @@ input[type="checkbox"] {
     }
     
     .residential__fields .field:last-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .radio__group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .radio__card {
         width: 100%;
     }
 }

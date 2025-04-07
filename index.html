@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulário de Inscrição</title>
+        <title>Inscrição | Trilhas</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="scripts/help-text.js" defer></script>
+        <script src="scripts/main.js" defer></script>
         <script src="https://kit.fontawesome.com/de5335ea2b.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/imask"></script>
     </head>
     <body>
         <div class="form-container">
@@ -24,7 +25,7 @@
                     <h4 class="info__participant">Informações do Participante</h4>
                 
                     <div class="field">
-                        <label class="input__label" for="nome">Nome Completo</label>
+                        <label class="input__label" for="name">Nome Completo</label>
                         <input type="text" id="name" name="nome" placeholder="Digite seu nome completo">
                         <div class="help-text help__text--hidden">
                             <i class="fa-solid fa-circle-exclamation"></i>
@@ -81,21 +82,32 @@
                             Este é um campo obrigatório.
                         </div>
                     </div>
-                
-                    <div class="field">
+
+                    <div class="field file-field">
                         <label class="input__label" for="identidade">Documento de identidade</label>
-                        <label class="input__label file__label" for="identidade">
+
+                        <label class="input__label file__label" for="identidade" id="label-identidade">
                             <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
                         </label>
+
+                        <div class="file-preview hidden" id="preview-identidade">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-identidade"></span>
+                            <button type="button" class="remove-file" data-target="identidade">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
                         <input type="file" id="identidade" name="identidade">
+
                         <div class="help-text help__text--hidden">
                             <i class="fa-solid fa-circle-exclamation"></i>
                             Este é um campo obrigatório.
                         </div>
                     </div>
-                
+
                     <h4 class="informacoes__participante">Endereço residencial</h4>
                     
                     <div class="field">
@@ -147,14 +159,25 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <label class="input__label" for="comprovante">Comprovante de residência</label>
-                        <label class="input__label file__label" for="comprovante">
+                    <div class="field file-field">
+                        <label class="input__label" for="comprovante">Comprovante de Residencia</label>
+
+                        <label class="input__label file__label" for="comprovante" id="label-comprovante">
                             <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
                             <p>Clique aqui para</p>
                             <p>selecionar o arquivo</p>
                         </label>
+
+                        <div class="file-preview hidden" id="preview-comprovante">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-comprovante"></span>
+                            <button type="button" class="remove-file" data-target="comprovante">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
                         <input type="file" id="comprovante" name="comprovante">
+
                         <div class="help-text help__text--hidden">
                             <i class="fa-solid fa-circle-exclamation"></i>
                             Este é um campo obrigatório.
@@ -234,6 +257,7 @@
                         <button class="cancel">Cancelar</button>
                         <button class="subscribe">Fazer inscrição</button>
                     </div>
+                </form>
             </div>
         </div>
         <div class="image-container background-blue">

@@ -243,7 +243,7 @@ input[type="file"] {
 
 .radio__group {
     display: flex;
-    gap: 16px;
+    gap: 1.5rem;
 }
 
 .cards__trilhas_container {
@@ -361,6 +361,49 @@ input[type="checkbox"] {
     display: none;
 }
 
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px dashed var(--color-stroke-default);
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: var(--color-surface-primary);
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.file-preview i.fa-file {
+    color: var(--color-brand-dark);
+    margin-right: 8px;
+}
+
+.remove-file {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-semantic-error);
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
 @media (max-width: 1030px){
     .spacing__default {
         padding: 16px;
@@ -385,18 +428,15 @@ input[type="checkbox"] {
     .residential__fields .field:last-child {
         width: 100%;
     }
+}
 
-    .login {
-  
-        display: flex;
+@media (max-width: 400px) {
+    .radio__group {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: white;
-         padding: 20px;
-         border-radius: 10px;
-         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-         text-align: center;
-         width: 300px;
+        gap: 0.5rem;
+    }
+
+    .radio__card {
+        width: 100%;
     }
 }

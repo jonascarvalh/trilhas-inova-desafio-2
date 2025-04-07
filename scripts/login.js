@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
             
             localStorage.setItem("usuarioLogado", username);
 
-            window.location.href = "http://127.0.0.1:5500/index.html";
+            // Maria vai fazer isso aqui funcionar
+            window.location.href = "/index.html";
         } else {
             errorMessage.textContent = "Usuário ou senha incorretos!";
             errorMessage.style.color = "red";

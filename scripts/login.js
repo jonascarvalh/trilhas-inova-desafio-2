@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("usuarioLogado", username);
 
             // Maria vai fazer isso aqui funcionar
-            window.location.href = "/index.html";
+            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/" + "index.html";
         } else {
             errorMessage.textContent = "Usuário ou senha incorretos!";
             errorMessage.style.color = "red";

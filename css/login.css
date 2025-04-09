@@ -50,6 +50,7 @@ body {
     font-size: 2rem; /* Dividir 16, encontra valor em rem */
     line-height: 120%;
     font-weight: bold;
+    margin: 1rem 0;
 }
 
 .heading2 {
@@ -76,12 +77,6 @@ body {
     line-height: 120%;
 }
 
-.back__container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .text__primary {
     color: var(--color-text-primary);
 }
@@ -97,15 +92,12 @@ input {
     color: var(--color-text-primary);
     font-size: 1rem;
     padding: 12px;
-    margin-bottom: 10px;
-
 }
 
 input:focus {
     outline: none;
     box-shadow: 0 0 5px var(--color-stroke-hightlight-focus);
     border: 2px solid var(--color-stroke-highlight);
-
 }
 
 button {
@@ -118,22 +110,46 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 16px;
-    margin-top: 10px; 
-
+    margin-top: 10px;
 }
 
-.login {
-  
+#login {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 600px;
+    gap: 10px;
+}
+
+.loginForm {
+    background: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 2rem;
+}
+
+.loginForm img {
+    align-self: center;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.help-text {
+    display: flex;
     align-items: center;
-    background: white;
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-     text-align: center;
-     width: 300px;
-     gap: 10px;
- 
- }
+    gap: 4px;
+    color: var(--color-semantic-error);
+    font-size: 14px;
+}
+
+
+.help__text--hidden {
+    display: none;
+}

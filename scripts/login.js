@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const username = usernameInput.value.trim();
         const password = passwordInput.value.trim();
-        
-        console.log(username);
-        console.log(password);
 
         // Recupera lista de usuários do sessionStorage
         const dados = sessionStorage.getItem("listaUsuarios");
@@ -28,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.username + "!");
 
             // Redireciona
-            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/index.html";
+            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/login-sucess.html";
         } else {
             // Mostra mensagem de erro
             helpText.classList.remove("help__text--hidden");

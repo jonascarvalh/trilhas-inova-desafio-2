@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscrição | Trilhas</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/main.js" defer></script>
+        <script src="https://kit.fontawesome.com/de5335ea2b.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/imask"></script>
+    </head>
+    <body>
+        <div class="form-container">
+
+            <div class="spacing__default">
+                <div class="back__container">
+                    <img src="assets/icons/arrow-left-02.png" alt="arrow-left-02">
+                    <p class="text">Voltar</p>
+                </div>
+                <h1 class="heading1 text__primary">Formulário de Inscrição</h1>
+                <p class="text text__secondary">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+                
+                <form class="form__register" id="form__register" action="" method="post">
+
+                    <h4 class="info__participant">Informações do Participante</h4>
+                
+                    <div class="field">
+                        <label class="input__label" for="name">Nome Completo</label>
+                        <input type="text" id="name" name="nome" placeholder="Digite seu nome completo">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="input__label" for="data_nascimento">Data de Nascimento</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" placeholder="dd/mm/aa">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="input__label" for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="input__label" for="sexo">Sexo</label>
+                        <select id="sexo" name="sexo">
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="input__label" for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="input__label" for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="input__label" for="idUsuario">ID do usuário</label>
+                        <input type="text" id="idUsuario" name="idUsuario" placeholder="mariadelmondes">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div> 
+                    </div>
+
+                    <div class="field">
+                        <label class="input__label" for="senhaUsuario">Senha</label>
+                        <input type="password" id="senhaUsuario" name="senhaUsuario" placeholder="***********">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div> 
+                    </div>
+
+                    <div class="field file-field">
+                        <label class="input__label" for="identidade">Documento de identidade</label>
+
+                        <label class="input__label file__label" for="identidade" id="label-identidade">
+                            <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
+                            <p>Clique aqui para</p>
+                            <p>selecionar o arquivo</p>
+                        </label>
+
+                        <div class="file-preview hidden" id="preview-identidade">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-identidade"></span>
+                            <button type="button" class="remove-file" data-target="identidade">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <input type="file" id="identidade" name="identidade">
+
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+
+                    <h4 class="informacoes__participante">Endereço residencial</h4>
+                    
+                    <div class="field">
+                        <label class="input__label" for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000">
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+
+                    <div class="residential__fields">              
+                        <div class="field">
+                            <label class="input__label" for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" placeholder="Rua Joaquim Vieira">
+                            <div class="help-text help__text--hidden">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                Este é um campo obrigatório.
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="input__label" for="numero">Número</label>
+                            <input type="text" id="numero" name="numero" placeholder="10">
+                            <div class="help-text help__text--hidden">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                Este é um campo obrigatório.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="residential__fields">
+                        <div class="field">
+                            <label class="input__label" for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="São Luís">
+                            <div class="help-text help__text--hidden">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                Este é um campo obrigatório.
+                            </div>
+                        </div>
+                    
+                        <div class="field">
+                            <label class="input__label" for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" placeholder="Maranhão">
+                            <div class="help-text help__text--hidden">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                Este é um campo obrigatório.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field file-field">
+                        <label class="input__label" for="comprovante">Comprovante de Residencia</label>
+
+                        <label class="input__label file__label" for="comprovante" id="label-comprovante">
+                            <img src="assets/icons/cloud-upload.svg" alt="nuvem-upload">
+                            <p>Clique aqui para</p>
+                            <p>selecionar o arquivo</p>
+                        </label>
+
+                        <div class="file-preview hidden" id="preview-comprovante">
+                            <i class="fa-solid fa-file"></i>
+                            <span id="file-name-comprovante"></span>
+                            <button type="button" class="remove-file" data-target="comprovante">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <input type="file" id="comprovante" name="comprovante">
+
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+
+                    <h4 class="informacoes__participante">Trilhas de aprendizagem</h4>
+                
+                    <p class="text__command">Selecione apenas uma trilha</p>
+                    
+                    <div class="cards__trilhas_container">
+                        <div class="radio__group">
+                            <label class="radio__card">
+                                <input type="radio" name="radio-trilha" id="front" value="front">
+                                <div class="content__card">
+                                    <img src="assets/icons/icon-front.svg" alt="Icone trilha front-end">
+                                </div>
+                                <p>Programação Front-end</p>
+                            </label>
+                            
+                            <label class="radio__card">
+                                <input type="radio" name="radio-trilha" id="back" value="back">
+                                <div class="content__card">
+                                    <img src="assets/icons/icon-back.svg" alt="Icone trilha back-end">
+                                </div>
+                                <p>Programação Back-end</p>
+                            </label>
+                        </div>
+
+                        <div class="radio__group">
+                            <label class="radio__card">
+                                <input type="radio" name="radio-trilha" id="jogos" value="jogos">
+                                <div class="content__card">
+                                    <img src="assets/icons/icon-jogos.svg" alt="Icone trilha de jogos">
+                                </div>
+                                <p>Programação de Jogos</p>
+                            </label>
+                            
+                            <label class="radio__card">
+                                <input type="radio" name="radio-trilha" id="design" value="design">
+                                <div class="content__card">
+                                    <img src="assets/icons/icon-design.svg" alt="Icone trilha design-end">
+                                </div>
+                                <p>Design e Experiência</p>
+                            </label>
+                        </div>
+                        
+                        <label class="radio__card card__data_science">
+                            <input type="radio" name="radio-trilha" id="data-science" value="data-science">
+                            <div class="content__card">
+                                <img src="assets/icons/icon-dados.svg" alt="Icone trilha dados-end">
+                            </div>
+                            <p>Ciência de Dados</p>
+                        </label>
+
+                        <div class="help-text help__text--hidden">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Este é um campo obrigatório.
+                        </div>
+                    </div>
+
+                    <div class="terms">
+                        <label class="checkbox--container">
+                            <p>
+                                <input type="checkbox" name="termos-condicoes" id="term_highlight">
+                                Declaro que li e concordo com os <strong class="terms__highlight">Termos e Condições</strong> e com a 
+                                <strong class="terms__highlight">Política de Privacidade</strong>.
+                            </p>
+                            <div class="help-text help__text--hidden">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                Este é um campo obrigatório.
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="buttons__container">
+                        <button class="cancel">Cancelar</button>
+                        <button class="subscribe">Fazer inscrição</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="image-container background-blue">
+            <img class="illustration" src="assets/images/Ilustration.png" alt="ilustration">
+            <img src="assets/images/logo-trilhas-inova.svg" alt="Logo trilhas inova">
+        </div>
+
+    </body>
+</html>

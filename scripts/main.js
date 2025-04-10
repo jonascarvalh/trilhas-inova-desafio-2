@@ -69,11 +69,14 @@ form.addEventListener('submit', function(event) {
     }
     
     if (formValido) {
-        sessionStorage.setItem('formData', JSON.stringify(formData));
-        console.log(sessionStorage.getItem('formData'));
+        let dados = sessionStorage.getItem('listaUsuarios');
+        let listaUsuarios = dados ? JSON.parse(dados) : [];
+        
+        listaUsuarios.push(formData);
+
+        sessionStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
         this.submit();
     }
-
 });
 
 function validarCPF(cpf) {

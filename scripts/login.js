@@ -1,29 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("login");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const helpText = document.querySelector(".help-text");
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    console.log("carregou essa bagaça?");
-
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-
+    form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        let username = document.getElementById("username").value.trim();
-        let password = document.getElementById("password").value.trim();
-        let errorMessage = document.getElementById("error-message");
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        
+        console.log(username);
+        console.log(password);
 
-        const user = "usuario";
-        const pass = "12345678";
+        // Recupera lista de usuários do sessionStorage
+        const dados = sessionStorage.getItem("listaUsuarios");
+        const listaUsuarios = dados ? JSON.parse(dados) : [];
 
-        if (username === user && password === pass) {
-            alert("Inscrição realizada com sucesso! Bem-vindo(a), " + username + "!");
-            
-            localStorage.setItem("usuarioLogado", username);
+        // Procura um usuário que bata com username e password
+        const usuarioEncontrado = listaUsuarios.find(
+            user => user.idUsuario === username && user.senhaUsuario === password
+        );
 
-            // Maria vai fazer isso aqui funcionar
-            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/" + "index.html";
+        if (usuarioEncontrado) {
+            // Login bem-sucedido
+            helpText.classList.add("help__text--hidden");
+            alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.username + "!");
+
+            // Redireciona
+            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/index.html";
         } else {
-            errorMessage.textContent = "Usuário ou senha incorretos!";
-            errorMessage.style.color = "red";
+            // Mostra mensagem de erro
+            helpText.classList.remove("help__text--hidden");
         }
     });
 });

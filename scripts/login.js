@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.username + "!");
 
             // Redireciona
-            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/login-sucess.html";
+            window.location.href = "https://trilhas-inova-desafio-3.vercel.app/login-success.html";
         } else {
             // Mostra mensagem de erro
             helpText.classList.remove("help__text--hidden");

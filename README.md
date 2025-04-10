@@ -30,11 +30,11 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 ## Como Executar o Projeto
 
 1. Clone ou baixe o repositório no seu computador.
-2. Abra o arquivo `login.html` em um navegador moderno.
-3. Faça login utilizando:
-   - **Usuário:** `usuario`
-   - **Senha:** `12345678`
-4. Após o login, você será redirecionado para o formulário de inscrição (`index.html`).
+2. Abra o arquivo `lndex.html` em um navegador moderno.
+3. Faça seu cadastro forcendo um usuário e senha.
+4. Você será redirecionado para o formulário de inscrição (`inscrição.html`).
+3. Faça login utilizando seu usuário cadastrado.
+4. Após o login, você será redirecionado para uma página informando que você realizou o login.
 5. Preencha todos os campos obrigatórios e envie a inscrição.
 
 ## Estrutura de Pastas

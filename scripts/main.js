@@ -26,6 +26,7 @@ form.addEventListener('submit', function(event) {
                 helpText.classList.remove('help__text--hidden');
                 formValido = false;
             } else {
+                helpText.classList.add('help__text--hidden');
                 formData[select.name] = select.value;
                 formValido = true;
             }
@@ -69,7 +70,7 @@ form.addEventListener('submit', function(event) {
     
     if (formValido) {
         sessionStorage.setItem('formData', JSON.stringify(formData));
-        // console.log(sessionStorage.getItem('formData'));
+        console.log(sessionStorage.getItem('formData'));
         this.submit();
     }
 

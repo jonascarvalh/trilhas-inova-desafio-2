@@ -324,6 +324,7 @@ input[type="checkbox"] {
     cursor: pointer;
     font-size: 1rem;
     font-family: var(--font-primary);
+    text-decoration: none;
 }
 
 .subscribe {

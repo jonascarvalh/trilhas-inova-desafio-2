@@ -25,7 +25,8 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- FontAwesome
+- FontAwesome (para ícones)
+- IMaskJS (para máscaras de entrada)
 
 ## Como Executar o Projeto
 
@@ -33,13 +34,29 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 2. Abra o arquivo `lndex.html` em um navegador moderno.
 3. Faça seu cadastro forcendo um usuário e senha.
 4. Você será redirecionado para o formulário de inscrição (`inscrição.html`).
-3. Faça login utilizando seu usuário cadastrado.
-4. Após o login, você será redirecionado para uma página informando que você realizou o login.
-5. Preencha todos os campos obrigatórios e envie a inscrição.
+5. Faça login utilizando seu usuário cadastrado.
+6. Após o login, você será redirecionado para uma página informando que você realizou o login.
+7. Preencha todos os campos obrigatórios e envie a inscrição.
 
 ## Estrutura de Pastas
 
-/projeto-trilhas │ ├── assets/ │ ├── icons/ # Ícones usados no projeto │ └── images/ # Ilustrações e imagens │ ├── css/ │ ├── login.css # Estilos da página de login │ └── styles.css # Estilos da página de formulário │ ├── scripts/ │ ├── login.js # Validação do login │ └── main.js # Validação do formulário de inscrição │ ├── index.html # Página do formulário de inscrição ├── login.html # Página de login └── .gitignore # Arquivo para ignorar pastas e arquivos no Git
+/projeto-trilhas
+│
+├── assets/
+│   ├── icons/        # Ícones utilizados no projeto
+│   └── images/       # Ilustrações e imagens
+│
+├── css/
+│   ├── login.css     # Estilos específicos da página de login
+│   └── styles.css    # Estilos da página de formulário
+│
+├── scripts/
+│   ├── login.js      # Validação do login
+│   └── main.js       # Validação do formulário de inscrição
+│
+├── index.html        # Página do formulário de inscrição
+├── login.html        # Página de login
+└── README.md         # Arquivo de documentação
 
 
 ## Principais Comportamentos do Projeto

@@ -76,6 +76,7 @@ form.addEventListener('submit', function(event) {
 
         sessionStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
         this.submit();
+        alert('O usuário foi registrado com sucesso!');
     }
 });
 

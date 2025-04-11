@@ -35,7 +35,7 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 3. Faça seu cadastro forcendo um usuário e senha.
 4. Você será redirecionado para o formulário de inscrição (`inscrição.html`).
 5. Faça login utilizando seu usuário cadastrado.
-6. Após o login, você será redirecionado para uma página informando que você realizou o login.
+6. Após o login, você será redirecionado para uma página informando que você realizou o login (`login-success.html`).
 7. Preencha todos os campos obrigatórios e envie a inscrição.
 
 ## Estrutura de Pastas

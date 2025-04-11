@@ -40,6 +40,7 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 
 ## Estrutura de Pastas
 
+```
 /projeto-trilhas
 │
 ├── assets/
@@ -57,7 +58,7 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 ├── index.html        # Página do formulário de inscrição
 ├── login.html        # Página de login
 └── README.md         # Arquivo de documentação
-
+```
 
 ## Principais Comportamentos do Projeto
 

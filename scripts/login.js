@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const usuarioEncontrado = listaUsuarios.find(
             user => user.idUsuario === username && user.senhaUsuario === password
         );
-
+        
         if (usuarioEncontrado) {
             // Login bem-sucedido
             helpText.classList.add("help__text--hidden");
-            alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.username + "!");
+            alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.idUsuario + "!");
 
             // Redireciona
             window.location.href = "https://trilhas-inova-desafio-3.vercel.app/login-success.html";

@@ -25,7 +25,8 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- FontAwesome
+- FontAwesome (para ícones)
+- IMaskJS (para máscaras de entrada)
 
 ## Como Executar o Projeto
 
@@ -39,8 +40,25 @@ Este projeto é uma aplicação web simples composta por uma tela de login e um 
 
 ## Estrutura de Pastas
 
-/projeto-trilhas │ ├── assets/ │ ├── icons/ # Ícones usados no projeto │ └── images/ # Ilustrações e imagens │ ├── css/ │ ├── login.css # Estilos da página de login │ └── styles.css # Estilos da página de formulário │ ├── scripts/ │ ├── login.js # Validação do login │ └── main.js # Validação do formulário de inscrição │ ├── index.html # Página do formulário de inscrição ├── login.html # Página de login └── .gitignore # Arquivo para ignorar pastas e arquivos no Git
-
+```
+/projeto-trilhas
+│
+├── assets/
+│   ├── icons/        # Ícones utilizados no projeto
+│   └── images/       # Ilustrações e imagens
+│
+├── css/
+│   ├── login.css     # Estilos específicos da página de login
+│   └── styles.css    # Estilos da página de formulário
+│
+├── scripts/
+│   ├── login.js      # Validação do login
+│   └── main.js       # Validação do formulário de inscrição
+│
+├── index.html        # Página do formulário de inscrição
+├── login.html        # Página de login
+└── README.md         # Arquivo de documentação
+```
 
 ## Principais Comportamentos do Projeto
 

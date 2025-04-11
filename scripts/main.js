@@ -77,6 +77,7 @@ form.addEventListener('submit', function(event) {
         sessionStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
         this.submit();
         alert('O usuário foi registrado com sucesso!');
+        window.location.href = 'https://trilhas-inova-desafio-3.vercel.app/index.html';
     }
 });
 

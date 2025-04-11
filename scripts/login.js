@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (usuarioEncontrado) {
             // Login bem-sucedido
             helpText.classList.add("help__text--hidden");
+            
             alert("Login realizado com sucesso! Bem-vindo(a), " + usuarioEncontrado.idUsuario + "!");
 
             // Redireciona
